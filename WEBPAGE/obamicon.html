@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<h1> Obamicon</h1>
+	<script>
+		function changimage1(){
+	var image = document.getElementById("tiger");
+		<!-- image.src="tiger2.JPE"; -->
+	if(image.src.match("obamicon")){
+		image.src = "tiger.JPG";
+	}else{
+		image.src= "obamicon.bmp";
+	}
+}
+	</script>
+</head>
+<body>
+	<p>
+<pre>
+from PIL import Image
+im=Image.open("tiger2.jpe")
+print(im)
+
+darkBlue = (0, 51, 76)
+red = (217, 26, 33)
+lightBlue = (112, 150, 158)
+yellow = (252, 227, 166)
+
+list2=[]
+pixel= im.getdata()
+pixlist=list(pixel)
+
+for color in pixel:
+    red = color[0]
+    green= color[1]
+    blue= color[2]
+    intensity = red + green + blue
+    
+    if intensity < 182:
+        color = darkBlue
+        list2.append(color)
+    elif intensity >= 182 and intensity < 364:
+        color=red
+        list2.append(color)
+    elif intensity >= 364 and intensity < 545:
+        color= lightBlue
+        list2.append(color)
+    elif intensity >= 546:
+        color= yellow
+        list2.append(color)
+
+       
+newim=Image.new("RGB", (225, 225))
+newim.putdata(list2)
+newim.rotate(0).show()
+
+	</pre>
+	</p>
+	<img src="tiger.JPG" id="tiger" onclick=changimage1()>
+</body>
+</html>

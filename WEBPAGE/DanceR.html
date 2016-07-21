@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<h1> Arduino Dance </h1>
+</head>
+<body>
+	<p>
+	<pre>
+	#include <Servo.h>
+Servo servoRight;
+Servo servoLeft;
+
+void forwardM(){
+  servoRight.writeMicroseconds(1300);
+  servoLeft.writeMicroseconds(1700);
+}
+
+void stopM(){
+  servoLeft.writeMicroseconds(1500);
+  servoRight.writeMicroseconds(1500);
+}
+
+void backwardM(){
+ servoRight.writeMicroseconds(1700);
+ servoLeft.writeMicroseconds(1300); 
+}
+
+void rightM(){
+  servoRight.writeMicroseconds(1500);
+  servoLeft.writeMicroseconds(1700);
+}
+
+void leftM(){
+  servoRight.writeMicroseconds(1300);
+  servoLeft.writeMicroseconds(1500);
+}
+
+void spinRM(){
+  servoRight.writeMicroseconds(1500);
+  servoLeft.writeMicroseconds(1700);
+  delay(5000);
+}
+
+void setup() {
+  // put your setup code here, to run once:
+  servoLeft.attach(13);
+  servoRight.attach(12);
+  servoLeft.writeMicroseconds(1500);
+  servoRight.writeMicroseconds(1500);
+  delay(5000);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  forwardM();
+  delay(3000);
+  stopM();
+  delay(50);
+  backwardM();
+  delay(3000);
+  stopM();
+  delay(50);
+  forwardM();
+  delay(1000);
+  stopM();
+  delay(50);
+  backwardM();
+  delay(1000);
+  stopM();
+  delay(50);
+  
+  rightM();
+  delay(2000);
+  stopM();
+  delay(100);
+  
+  forwardM();
+  delay(200);
+  stopM();
+  delay(10);
+  backwardM();
+  delay(200);
+  stopM();
+  delay(10);
+  forwardM();
+  delay(200);
+  stopM();
+  delay(10);
+  backwardM();
+  delay(200);
+  stopM();
+  delay(10);
+  forwardM();
+  delay(200);
+  stopM();
+  delay(10);
+  backwardM();
+  delay(200);
+  stopM();
+  delay(10);
+  forwardM();
+  delay(200);
+  stopM();
+  delay(10);
+  backwardM();
+  delay(200);
+  stopM();
+  delay(10);
+  forwardM();
+  delay(200);
+  stopM();
+  delay(10);
+  backwardM();
+  delay(200);
+  stopM();
+  delay(10);
+  forwardM();
+  delay(200);
+  stopM();
+  delay(10);
+  backwardM();
+  delay(200);
+  stopM();
+  delay(10);
+  forwardM();
+  delay(200);
+  stopM();
+  delay(10);
+  backwardM();
+  delay(200);
+  stopM();
+  delay(10);
+  forwardM();
+  delay(200);
+  stopM();
+  delay(10);
+  backwardM();
+  delay(200);
+  stopM();
+  delay(10);
+  forwardM();
+  delay(200);
+  stopM();
+  delay(10);
+  backwardM();
+  delay(200);
+  stopM();
+  delay(10);
+  forwardM();
+  delay(200);
+  stopM();
+  delay(10);
+  backwardM();
+  delay(200);
+  stopM();
+  delay(10);
+  forwardM();
+  delay(200);
+  stopM();
+  delay(10);
+  backwardM();
+  delay(200);
+  stopM();
+  delay(10);
+  forwardM();
+  delay(200);
+  stopM();
+  delay(10);
+  backwardM();
+  delay(200);
+  stopM();
+  delay(10);
+  
+  spinRM();
+  delay(3000);
+  stopM();
+  delay(100);
+
+
+}
+
+	</pre>
+	</p>
+	<img src= alt=>
+</body>
+</html>
